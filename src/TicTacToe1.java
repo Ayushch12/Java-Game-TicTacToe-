@@ -10,6 +10,9 @@ public class TicTacToe1 {
                 {' ', '|', ' ', '|', ' '}
         };
 
+        printGameBoard(gameBoard);
+    }
+    public static void printGameBoard(char [][] gameBoard) {
         for (char[] row : gameBoard) {
             for (char c : row) {
                 System.out.print(c);
@@ -17,4 +20,4 @@ public class TicTacToe1 {
             System.out.println();
         }
     }
-}
+    }
