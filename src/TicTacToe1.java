@@ -12,8 +12,9 @@ public class TicTacToe1 {
 
         for (char[] row : gameBoard) {
             for (char c : row) {
-                System.out.println(c);
+                System.out.print(c);
             }
+            System.out.println();
         }
     }
 }
