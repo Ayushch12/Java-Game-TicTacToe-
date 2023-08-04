@@ -1,4 +1,6 @@
+import java.util.Random;
 import java.util.Scanner;
+
 
 public class TicTacToe1 {
 
@@ -14,15 +16,25 @@ public class TicTacToe1 {
 
         printGameBoard(gameBoard);
 
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Enter your placement (1-9):");
-        int pos = scan.nextInt();
 
-        System.out.println(pos);
+        while(true){
+            Scanner scan = new Scanner (System.in);
+            System.out.println("Enter your placement (1-9):");
+            int pos = scan.nextInt();
 
-        placePiece(gameBoard, pos, "player");
+            System.out.println(pos);
 
-        printGameBoard(gameBoard);
+            placePiece(gameBoard, pos, "player");
+
+            Random rand = new Random();
+            int cpuPos = rand.nextInt(9) +1;
+            placePiece(gameBoard, cpuPos, "cup");
+
+            printGameBoard(gameBoard);
+        }
+
+
+
     }
     public static void printGameBoard(char [][] gameBoard) {
         for (char[] row : gameBoard) {
