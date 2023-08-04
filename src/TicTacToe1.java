@@ -33,6 +33,8 @@ public class TicTacToe1 {
             placePiece(gameBoard, cpuPos, "cup");
 
             printGameBoard(gameBoard);
+
+            checkWinner();
         }
 
 
@@ -52,8 +54,10 @@ public class TicTacToe1 {
         char symbol = ' ' ;
         if(user.equals("player")){
             symbol = 'X';
+            playerPositions.add(pos);
         } else if (user.equals("cpu")){
             symbol = '0';
+            cpuPositions.add(pos);
         }
 
         switch(pos){
