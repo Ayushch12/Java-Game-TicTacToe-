@@ -34,7 +34,8 @@ public class TicTacToe1 {
 
             printGameBoard(gameBoard);
 
-            checkWinner();
+           String result =  checkWinner();
+           System.out.println(result);
         }
 
 
