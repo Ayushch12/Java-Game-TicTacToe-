@@ -16,7 +16,7 @@ public class TicTacToe1 {
                 {' ', '|', ' ', '|', ' '}
         };
 
-        printGameBoard(gameBoard);
+        printGameBoard(gameBoard) ;
 
 
         while(true){
