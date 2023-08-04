@@ -1,12 +1,10 @@
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 
 public class TicTacToe1 {
 
-
+    static ArrayList<Integer>playerPositions = new ArrayList<Integer>();
+    static ArrayList<Integer>cpuPositions = new ArrayList<Integer>();
 
     public static void main(String[] args) {
 
@@ -102,6 +100,27 @@ public class TicTacToe1 {
         List rightCol = Arrays.asList(3, 6 ,9);
         List cross1 = Arrays.asList(1, 5 ,9);
         List cross2 = Arrays.asList(7, 5 ,3);
+
+List<List> winning = new ArrayList<List>();
+        winning.add(topRow);
+        winning.add(midRow);
+        winning.add(botRow);
+        winning.add(leftCol);
+        winning.add(rightCol);
+        winning.add(cross1);
+        winning.add(cross2);
+
+        for (List l: winning){
+            if(playerPositions.containsAll(l)){
+                return "Conguratulations you won";
+            } else if (cpuPositions.containsAll(l)) {
+                return "CPU wins! Sorry : (";
+            }else if(playerPositions.size()+ cpuPositions.size()==9){
+                return "CAT";
+
+            }
+        }
+
 
 
         return " ";
